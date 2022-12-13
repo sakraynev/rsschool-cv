@@ -13,13 +13,24 @@
 </head>
 
 <body>
+  <header class="main-header">
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#about-me">About me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#code">Code</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
   <main class="main-container">
     <h1 class="visually-hidden">My CV</h1>
     <div class="left-container">
       <img class="my-photo" src="img/my_photo.jpg" width="300" height="300" alt="My photo.">
       <section class="contacts">
         <h2 class="visually-hidden">Contacts</h2>
-        <ul class="contacts-list">
+        <ul class="contacts-list" id="contacts">
           <li class="contact-item">
             <span class="contact-icon contact-icon-github">
               <svg width="31" height="35" viewBox="0 0 32 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +74,7 @@
           </li>
         </ul>
       </section>
-      <section class="tech-stack">
+      <section class="tech-stack" id="skills">
         <h2 class="title">Tech-Stack</h2>
         <ul class="tech-stack-list">
           <li class="tech-stack-item">
@@ -155,7 +166,7 @@
       <section class="about-me">
         <h2 class="visually-hidden">About me</h2>
         <span class="circle"></span>
-        <h3 class="name"><span>Alexander</span> Klivets</h3>
+        <h3 class="name" id="about-me"><span>Alexander</span> Klivets</h3>
         <b class="profession">Frontend-Developer</b>
         <p class="about-me-description">
           I am 27 years old, I am a beginner front-end developer, I have experience in layout of adaptive and
@@ -164,7 +175,7 @@
         </p>
       </section>
       <section class="code-example">
-        <div class="title-container">
+        <div class="title-container" id="code">
         <h2 class="title title-code-example">Code Example</h2>
         <small>From random task</small>
         </div>
@@ -184,7 +195,7 @@
 }</code>
         </pre>
       </section>
-      <section class="my-projects">
+      <section class="my-projects" id="projects">
         <h2 class="title">My projects</h2>
         <ul class="projects-list">
           <li class="project-item">

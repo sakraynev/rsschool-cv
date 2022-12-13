@@ -26,8 +26,15 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Montserrat", sans-serif;
   line-height: 15px;
   background-color: #ffffff;
@@ -39,6 +46,8 @@ body {
   margin: 0 auto;
   width: 1000px;
   display: flex;
+  flex-grow: 1;
+  box-shadow: 8px 0 8px rgba(105, 150, 219, 0.25);
 }
 
 .left-container {
@@ -101,6 +110,11 @@ body {
   line-height: 17px;
   text-decoration: none;
   color: #4cb18d;
+  transition: color 0.5s;
+}
+
+.contact-link:hover {
+  color: #9fdcc6;
 }
 
 .title {
@@ -154,8 +168,21 @@ body {
 }
 
 .right-container {
+  position: relative;
   width: 600px;
   padding: 0 40px;
+}
+
+.circle {
+  position: absolute;
+  top: 32px;
+  left: -245px;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  background-color: #4cb18d;
+  border-radius: 50%;
+  box-shadow: 8px 0 8px rgba(105, 150, 219, 0.25);
 }
 
 .about-me {
@@ -189,7 +216,7 @@ body {
 }
 
 .code-example {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .title-container {
@@ -230,14 +257,74 @@ code {
   box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.1);
 }
 
+.project-link {
+  display: block;
+}
+
+.project-image {
+  display: block;
+  transition: filter 0.5s;
+}
+
+.project-link:hover .project-image {
+  filter: brightness(90%);
+}
+
+.my-projects {
+  margin-bottom: 20px;
+}
+
 .main-footer {
   margin: 0 auto;
   width: 1000px;
+  background-color: #9fdcc6;
+  box-shadow: 8px 0 8px rgba(105, 150, 219, 0.25);
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 6px 40px;
+}
+
+.rsschool-link svg {
+  transition: opacity 0.5s;
+}
+
+.rsschool-link:hover svg {
+  opacity: 0.6;
+}
+
+.github-link .logo-wrapper {
+  transition: background-color 0.5s;
+}
+
+.github-link svg path {
+  transition: fill 0.5s;
+}
+
+.github-link:hover .logo-wrapper {
+  background-color: #ffffff;
+}
+
+.github-link:hover svg path {
+  fill: #2c2c2c;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 58px;
+  height: 58px;
+  background-color: #2c2c2c;
+  border-radius: 50%;
+}
+
+.name-copyright {
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .visually-hidden {
